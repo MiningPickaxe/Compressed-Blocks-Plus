@@ -1,0 +1,16 @@
+[
+{
+  "modid": "compress",
+  "name": "Compressed Blocks +",
+  "description": "Adds more compressed Blocks",
+  "version": "1.1.1",
+  "mcversion": "1.7.10",
+  "url": "http://www.mining-pickaxe.jimdo.de",
+  "updateUrl": "",
+  "authorList": ["Mining_Pickaxe"],
+  "credits": "Code and Textures by: Mining_Pickaxe",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

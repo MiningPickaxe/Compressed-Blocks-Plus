@@ -1,0 +1,19 @@
+tile.CompressedIronBlock.name=Compressed Block of Iron
+tile.CompressedGoldBlock.name=Compressed Block of Gold
+tile.CompressedEmeraldBlock.name=Compressed Block of Emerald
+tile.CompressedLapisBlock.name=Compressed Lapis Lazuli Block
+tile.CompressedRedstoneBlock.name=Compressed Block of Redstone
+tile.CompressedDiaBlock.name=Compressed Block of Diamond
+tile.CompressedQuartzBlock.name=Compressed Block of Quartz
+tile.CompressedNetherrackBlock.name=Compressed Netherrack
+tile.CompressedCoalBlock.name=Compressed Block of Coal
+tile.NetherstarBlock.name=Block of Netherstars
+tile.CompressedGlowstoneBlock.name=Compressed Block of Glowstone
+tile.CompressedObsidianBlock.name=Compressed Obsidian
+tile.blockStamper.name=Comrpessor
+container.blockStamper=Compressor
+
+
+itemGroup.CompressTab=Compressed Blocks +
+
+tile.compressor.name=Compressor
