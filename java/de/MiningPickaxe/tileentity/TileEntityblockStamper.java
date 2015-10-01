@@ -20,9 +20,9 @@ public class TileEntityblockStamper extends TileEntity implements ISidedInventor
 	public static final int maxPower = 10000;
 	public static final int stampingSpeed = 150;
 	
-	private static final int[] slots_top = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8};
-	private static final int[] slots_bottom = new int[] {10};
-	private static final int[] slots_side = new int[] {9};
+	private static final int[] slots_top = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8};//grid
+	private static final int[] slots_bottom = new int[] {10};//Output
+	private static final int[] slots_side = new int[] {9};//Fuel
 	
 	private String customName;
 	
@@ -268,7 +268,7 @@ public class TileEntityblockStamper extends TileEntity implements ISidedInventor
 	}
 	
 	public boolean isStamping() {
-		return this.nonaCookTime != 0;//this is not working i think?!
+		return this.nonaCookTime > 0;//this is not working i think?! but in line 279 it works....
 	}
 	
 	
@@ -310,7 +310,7 @@ public class TileEntityblockStamper extends TileEntity implements ISidedInventor
 			
 			if (flag != this.isStamping()) {
 				flag1 = true;
-				blockStamper.updateBlockState(this.isStamping(), this.worldObj, this.xCoord, this.yCoord, this.zCoord);//works if i set it manual
+				blockStamper.updateBlockState(this.isStamping(), this.worldObj, this.xCoord, this.yCoord, this.zCoord);//works if i set it manual. Should change the block to a active state
 			}
 			
 		}

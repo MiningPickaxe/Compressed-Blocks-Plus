@@ -27,7 +27,7 @@ import cpw.mods.fml.common.network.IGuiHandler;
 public class compress
 {
     public static final String MODID = "compress";
-    public static final String VERSION = "1.2beta1";
+    public static final String VERSION = "Alpha2.0";
     
     compressWorldGen eventWorldGen = new compressWorldGen();
     
