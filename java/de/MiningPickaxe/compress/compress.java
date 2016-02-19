@@ -3,7 +3,9 @@ package de.MiningPickaxe.compress;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -21,6 +23,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import de.MiningPickaxe.compress.worldgen.compressWorldGen;
 import de.MiningPickaxe.handler.GuiHandler;
 import de.MiningPickaxe.tileentity.TileEntityblockStamper;
+import de.MiningPickaxe.tools.CompressedWoodenSword;
 import cpw.mods.fml.common.network.IGuiHandler;
 
 @Mod(modid = compress.MODID, version = compress.VERSION)
@@ -40,6 +43,9 @@ public class compress
 		}
 	};
     
+	//Tools
+	public static ToolMaterial CompressedWood = EnumHelper.addToolMaterial("CompressedWood", 0, 177, 2.0F, 3F, 15);
+	
 	
 	//Compressed Blöcke
     public static Block CompressedGoldBlock = new de.MiningPickaxe.compress.blocks.CompressedGoldBlock(Material.rock).setBlockName("CompressedGoldBlock").setBlockTextureName(MODID + ":CompressedGoldBlock");
@@ -62,6 +68,12 @@ public class compress
     
     //Items
     public static Item materie;
+    public static Item itemCompressedWoodenSword;
+    public static Item itemCompressedWoodenAxe;
+    public static Item itemCompressedWoodenShovel;
+    public static Item itemCompressedWoodenHoe;
+    public static Item itemCompressedWoodenPickaxe;
+    
     
     //Maschine
     public static Block compressor = new de.MiningPickaxe.machine.blocks.compressor(Material.rock).setBlockName("compressor");
@@ -100,6 +112,20 @@ public class compress
     	materie = new de.MiningPickaxe.items.materie().setUnlocalizedName("materie").setTextureName(MODID + ":materie");
     	GameRegistry.registerItem(materie, "materie");
     	
+    	itemCompressedWoodenSword = new de.MiningPickaxe.tools.CompressedWoodenSword(CompressedWood).setUnlocalizedName("CompressedWoodenSword");
+    	GameRegistry.registerItem(itemCompressedWoodenSword, "CompressedWoodenSword");
+    	
+    	itemCompressedWoodenAxe = new de.MiningPickaxe.tools.CompressedWoodenAxe(CompressedWood).setUnlocalizedName("CompressedWoodenAxe");
+    	GameRegistry.registerItem(itemCompressedWoodenAxe, "CompressedWoodenAxe");
+    	
+    	itemCompressedWoodenShovel = new de.MiningPickaxe.tools.CompressedWoodenShovel(CompressedWood).setUnlocalizedName("CompressedWoodenShovel");
+    	GameRegistry.registerItem(itemCompressedWoodenShovel, "CompressedWoodenShovel");
+    	
+    	itemCompressedWoodenHoe = new de.MiningPickaxe.tools.CompressedWoodenHoe(CompressedWood).setUnlocalizedName("CompressedWoodenHoe");
+    	GameRegistry.registerItem(itemCompressedWoodenHoe, "CompressedWoodenHoe");
+    	
+    	itemCompressedWoodenPickaxe = new de.MiningPickaxe.tools.CompressedWoodenPickaxe(CompressedWood).setUnlocalizedName("CompressedWoodenPickaxe");
+    	GameRegistry.registerItem(itemCompressedWoodenPickaxe, "CompressedWoodenPickaxe");
     	
     	
     	//Maschinen
